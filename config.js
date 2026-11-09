@@ -1,0 +1,52 @@
+/*
+ * ------------------------------------------------------------------
+ *  SITE SETTINGS — edit this file to change your details.
+ *  No coding needed: just change the text between the quotes.
+ * ------------------------------------------------------------------
+ */
+window.SITE_CONFIG = {
+  // About you
+  doctorName: "Dr. Viraj",
+  qualification: "MBBS",
+  role: "General Physician",
+  tagline: "Caring, evidence-based treatment for you and your family.",
+  about:
+    "I am a qualified MBBS doctor focused on primary care, preventive health and clear, honest advice. " +
+    "I take time to listen, explain every diagnosis in plain language and help you make the right decisions for your health.",
+  registrationNo: "Reg. No. — add your medical council number",
+
+  // Clinic
+  clinicName: "Viraj Health Clinic",
+  address: "Add your clinic address here",
+  phone: "+91 98765 43210",
+  email: "clinic@example.com",
+  hoursText: "Mon – Sat: 10:00 am – 1:00 pm, 5:00 pm – 8:00 pm · Sunday closed",
+  mapLink: "", // optional Google Maps link
+
+  // Booking
+  slots: ["10:00", "10:30", "11:00", "11:30", "12:00", "12:30",
+          "17:00", "17:30", "18:00", "18:30", "19:00", "19:30"],
+  closedDays: [0],      // 0 = Sunday, 1 = Monday ... 6 = Saturday
+  maxDaysAhead: 30,     // how far ahead patients can book
+
+  // Services shown on the home page
+  services: [
+    { title: "General consultation", text: "Fever, cough, cold, body pain, stomach problems and everyday illnesses." },
+    { title: "Diabetes & blood pressure", text: "Diagnosis, regular monitoring and long-term management plans." },
+    { title: "Health check-ups", text: "Routine and pre-employment check-ups with clear reports and advice." },
+    { title: "Infections", text: "Viral fevers, dengue, typhoid, urinary and skin infections." },
+    { title: "Vaccinations", text: "Adult vaccinations and guidance on travel and seasonal vaccines." },
+    { title: "Lifestyle advice", text: "Diet, weight, sleep and stress — practical plans that work." }
+  ],
+
+  // ---------------------------------------------------------------
+  //  DATABASE (optional but needed for real patient bookings)
+  //  Leave blank = demo mode: data is saved only in this browser.
+  //  Fill these in after following README "Go live" steps.
+  // ---------------------------------------------------------------
+  supabaseUrl: "",
+  supabaseAnonKey: "",
+
+  // Demo-mode dashboard PIN (only used when Supabase is not set up)
+  demoPin: "1234"
+};

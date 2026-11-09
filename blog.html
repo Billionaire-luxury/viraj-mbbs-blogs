@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Health Blog</title>
+  <meta name="description" content="Health articles written by your doctor.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f766e'/%3E%3Cpath d='M13 7h6v6h6v6h-6v6h-6v-6H7v-6h6z' fill='white'/%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><i data-icon="stethoscope" data-size="20"></i></span>
+        <span class="brand-name"><span data-cfg="doctorName"></span><small><span data-cfg="qualification"></span> · <span data-cfg="role"></span></small></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="blog.html" class="active">Health blog</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#book" class="btn btn-primary" style="padding:10px 16px">Book appointment</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch light or dark mode"><i data-icon="moon"></i></button>
+        <button class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><i data-icon="menu"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="blog-root">
+    <section class="block" id="list-view">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Health blog</div>
+          <h2>Articles and health tips</h2>
+          <p class="muted">Simple, trustworthy health advice. This is general information, not a substitute for a consultation.</p>
+        </div>
+        <div class="filters" id="cat-filters"></div>
+        <div class="grid-3" id="all-posts"><div class="empty">Loading…</div></div>
+      </div>
+    </section>
+    <article class="article" id="post-view" hidden></article>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <h4 data-cfg="clinicName"></h4>
+          <p><span data-cfg="doctorName"></span>, <span data-cfg="qualification"></span><br><span data-cfg="address"></span></p>
+          <p id="map-link-wrap" hidden><a id="map-link" target="_blank" rel="noopener">Open in Google Maps</a></p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p><a data-cfg-tel="phone"></a><br><a data-cfg-mail="email"></a></p>
+          <p class="emergency">Emergency: call 108</p>
+        </div>
+        <div>
+          <h4>Timings</h4>
+          <p data-cfg="hoursText"></p>
+        </div>
+      </div>
+      <div class="bottom">
+        <span>© <span id="year"></span> <span data-cfg="clinicName"></span></span>
+        <a href="admin.html">Doctor login</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
