@@ -6,13 +6,13 @@
  */
 window.SITE_CONFIG = {
   // About you
-  doctorName: "Dr. Viraj",
-  qualification: "MBBS",
-  role: "General Physician",
+  doctorName: "Dr. Viraj Bafna",
+  qualification: "1st year MBBS",
+  role: "Medical student",
   tagline: "Caring, evidence-based treatment for you and your family.",
   about:
-    "I am a qualified MBBS doctor focused on primary care, preventive health and clear, honest advice. " +
-    "I take time to listen, explain every diagnosis in plain language and help you make the right decisions for your health.",
+    "I am a first-year MBBS student with a passion for preventive health and clear, honest health information. " +
+    "Through this blog I share what I am learning in plain language, to help you understand your health better.",
   registrationNo: "Reg. No. — add your medical council number",
 
   // Clinic
