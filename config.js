@@ -20,13 +20,20 @@ window.SITE_CONFIG = {
   address: "Add your clinic address here",
   phone: "+91 98765 43210",
   email: "clinic@example.com",
-  hoursText: "Saturday – Sunday: 1:00 pm – 10:00 pm · Monday – Friday closed",
+  hoursText: "Monday – Friday: 9:00 pm – 11:00 pm · Saturday – Sunday: 1:00 pm – 10:00 pm",
   mapLink: "", // optional Google Maps link
 
   // Booking
-  slots: ["13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30",
-          "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30"],
-  closedDays: [1, 2, 3, 4, 5],      // 0 = Sunday, 1 = Monday ... 6 = Saturday
+  // Time slots for each day of the week (every slot is 30 minutes).
+  // 0 = Sunday, 1 = Monday ... 6 = Saturday. An empty list [] = closed that day.
+  slotsByDay: (function () {
+    const weekday = ["21:00", "21:30", "22:00", "22:30"];                       // 9:00 pm – 11:00 pm
+    const weekend = ["13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30",
+                     "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30",
+                     "21:00", "21:30"];                                           // 1:00 pm – 10:00 pm
+    return { 0: weekend, 1: weekday, 2: weekday, 3: weekday, 4: weekday, 5: weekday, 6: weekend };
+  })(),
+  closedDays: [],       // days fully closed, e.g. [0] for Sunday
   maxDaysAhead: 30,     // how far ahead patients can book
 
   // Services shown on the home page

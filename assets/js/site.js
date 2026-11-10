@@ -147,10 +147,11 @@
       if (!v) { slotsEl.innerHTML = `<span class="muted">Choose a date first.</span>`; return; }
       const [y, m, d] = v.split("-").map(Number);
       const day = new Date(y, m - 1, d);
-      if (closed.includes(day.getDay())) { slotsEl.innerHTML = `<span class="muted">The clinic is closed on ${dayNames[day.getDay()]}s. Please choose another date.</span>`; return; }
+      const daySlots = (CFG.slotsByDay && CFG.slotsByDay[day.getDay()]) || CFG.slots || [];
+      if (closed.includes(day.getDay()) || !daySlots.length) { slotsEl.innerHTML = `<span class="muted">The clinic is closed on ${dayNames[day.getDay()]}s. Please choose another date.</span>`; return; }
       const isToday = v === Store.isoDate(new Date());
       const nowMin = new Date().getHours() * 60 + new Date().getMinutes();
-      slotsEl.innerHTML = (CFG.slots || []).map((s) => {
+      slotsEl.innerHTML = daySlots.map((s) => {
         const [h, mm] = s.split(":").map(Number);
         const past = isToday && h * 60 + mm <= nowMin + 30;
         return `<button type="button" class="slot" data-slot="${esc(s)}" aria-pressed="false" ${past ? "disabled" : ""}>${fmtTime(s)}</button>`;
