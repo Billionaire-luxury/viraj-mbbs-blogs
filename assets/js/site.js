@@ -12,7 +12,6 @@
   const yr = $("#year"); if (yr) yr.textContent = new Date().getFullYear();
   const ini = $("#initials");
   if (ini) ini.textContent = (CFG.doctorName || "Dr").replace(/^Dr\.?\s*/i, "").split(/\s+/).map((w) => w[0]).join("").slice(0, 2).toUpperCase();
-  if (CFG.mapLink && /^https?:\/\//.test(CFG.mapLink)) { $("#map-link").href = CFG.mapLink; $("#map-link-wrap").hidden = false; }
   if (document.title === "Doctor | Book an appointment") document.title = `${CFG.doctorName}, ${CFG.qualification} | Book an appointment`;
 
   /* ---------- Header: theme + mobile menu ---------- */

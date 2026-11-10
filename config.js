@@ -17,10 +17,8 @@ window.SITE_CONFIG = {
 
   // Clinic
   clinicName: "Viraj Health Clinic",
-  address: "Add your clinic address here",
   email: "clinic@example.com",
   hoursText: "Monday – Friday: 9:00 pm – 11:00 pm · Saturday – Sunday: 1:00 pm – 10:00 pm",
-  mapLink: "", // optional Google Maps link
 
   // Booking
   // Time slots for each day of the week (every slot is 30 minutes).
