@@ -20,13 +20,13 @@ window.SITE_CONFIG = {
   address: "Add your clinic address here",
   phone: "+91 98765 43210",
   email: "clinic@example.com",
-  hoursText: "Mon – Sat: 10:00 am – 1:00 pm, 5:00 pm – 8:00 pm · Sunday closed",
+  hoursText: "Saturday – Sunday: 1:00 pm – 10:00 pm · Monday – Friday closed",
   mapLink: "", // optional Google Maps link
 
   // Booking
-  slots: ["10:00", "10:30", "11:00", "11:30", "12:00", "12:30",
-          "17:00", "17:30", "18:00", "18:30", "19:00", "19:30"],
-  closedDays: [0],      // 0 = Sunday, 1 = Monday ... 6 = Saturday
+  slots: ["13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30",
+          "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30"],
+  closedDays: [1, 2, 3, 4, 5],      // 0 = Sunday, 1 = Monday ... 6 = Saturday
   maxDaysAhead: 30,     // how far ahead patients can book
 
   // Services shown on the home page
