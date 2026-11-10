@@ -18,7 +18,6 @@ window.SITE_CONFIG = {
   // Clinic
   clinicName: "Viraj Health Clinic",
   address: "Add your clinic address here",
-  phone: "+91 98765 43210",
   email: "clinic@example.com",
   hoursText: "Monday – Friday: 9:00 pm – 11:00 pm · Saturday – Sunday: 1:00 pm – 10:00 pm",
   mapLink: "", // optional Google Maps link

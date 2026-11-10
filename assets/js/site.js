@@ -6,9 +6,6 @@
 
   /* ---------- Fill in text from config.js ---------- */
   document.querySelectorAll("[data-cfg]").forEach((el) => { el.textContent = CFG[el.dataset.cfg] || ""; });
-  document.querySelectorAll("[data-cfg-tel]").forEach((el) => {
-    const v = CFG[el.dataset.cfgTel] || ""; el.textContent = v; el.href = "tel:" + v.replace(/[^\d+]/g, "");
-  });
   document.querySelectorAll("[data-cfg-mail]").forEach((el) => {
     const v = CFG[el.dataset.cfgMail] || ""; el.textContent = v; el.href = "mailto:" + v;
   });

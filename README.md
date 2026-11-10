@@ -10,7 +10,7 @@ There is no build step. Plain HTML, CSS and JavaScript, so it runs on any free s
 
 ## 1. Add your details
 
-Open **`config.js`** and change your name, clinic address, phone, timings, time slots for each day (`slotsByDay`) and services. You don't need to touch anything else.
+Open **`config.js`** and change your name, clinic address, email, timings, time slots for each day (`slotsByDay`) and services. You don't need to touch anything else.
 
 ## 2. Try it (demo mode)
 
